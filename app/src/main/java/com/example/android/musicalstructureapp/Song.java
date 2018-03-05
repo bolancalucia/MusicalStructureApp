@@ -1,18 +1,16 @@
 package com.example.android.musicalstructureapp;
 
-import android.widget.ImageView;
-
 public class Song {
     private String mName;
     private String mArtist;
     private String mDuration;
-    private ImageView mPlay;
+    private int mPlayResourceId;
 
-    public Song(String name, String artist, String duration, ImageView play) {
+    public Song(String name, String artist, String duration, int playResourceId) {
         mName = name;
         mArtist = artist;
         mDuration = duration;
-        mPlay = play;
+        mPlayResourceId = playResourceId;
     }
 
     public String getName() {
@@ -25,10 +23,6 @@ public class Song {
 
     public String getDuration() {
         return mDuration;
-    }
-
-    public ImageView getPlay() {
-        return mPlay;
     }
 
 }

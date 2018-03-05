@@ -16,7 +16,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
     private int mColorResourceId;
 
-    public SongAdapter(Activity context, ArrayList<Song> songs, int colorResourceId ) {
+    public SongAdapter(Activity context, ArrayList<Song> songs, int colorResourceId) {
         super(context, 0, songs);
         mColorResourceId = colorResourceId;
     }
@@ -32,7 +32,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
                     R.layout.list_item, parent, false);
         }
 
-        Song currentSong = getItem(position);
+        final Song currentSong = getItem(position);
 
         TextView nameTextView = listItemView.findViewById(R.id.song_name);
         nameTextView.setText(currentSong.getName());
@@ -46,7 +46,6 @@ public class SongAdapter extends ArrayAdapter<Song> {
         View textContainer = listItemView.findViewById(R.id.color_list);
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         textContainer.setBackgroundColor(color);
-
 
         return listItemView;
     }
