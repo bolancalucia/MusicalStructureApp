@@ -27,6 +27,7 @@
     <style name="SongListStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/text_view_height</item>
+        <item name="android:textColor">@color/textColor</item>
     </style>
 
 </resources>

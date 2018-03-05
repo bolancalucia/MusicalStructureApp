@@ -26,7 +26,7 @@ public class ElectronicActivity extends AppCompatActivity {
         songs.add(new Song("Mad Love", "Sean Paul & David Guetta featuring Becky G", "3:20", (ImageView) findViewById(R.id.play_song)));
         songs.add(new Song("Miss You", "Cashmere Cat, Major Lazer & Tory Lanez", "3:06", (ImageView) findViewById(R.id.play_song)));
 
-        SongAdapter songAdapter = new SongAdapter(this, songs);
+        SongAdapter songAdapter = new SongAdapter(this, songs, R.color.colorElectronic);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(songAdapter);
 

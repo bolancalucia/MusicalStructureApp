@@ -2,6 +2,8 @@ package com.example.android.musicalstructureapp;
 
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
+        import android.view.View;
+        import android.widget.AdapterView;
         import android.widget.ImageView;
         import android.widget.ListView;
 
@@ -26,8 +28,15 @@ public class RockActivity extends AppCompatActivity {
         songs.add(new Song("Rx (Medicate)", "Theory Of A Deadman", "3:53", (ImageView) findViewById(R.id.play_song)));
         songs.add(new Song("Thought Contagion", "Muse", "3:26", (ImageView) findViewById(R.id.play_song)));
 
-        SongAdapter songAdapter = new SongAdapter(this, songs);
+        SongAdapter songAdapter = new SongAdapter(this, songs, R.color.colorRock);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(songAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+             // TO DO
+            }
+        });
     }
 }

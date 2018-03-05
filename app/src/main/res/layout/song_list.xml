@@ -14,10 +14,5 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingEnd="@dimen/spacing16"
-        android:paddingLeft="@dimen/spacing16"
-        android:paddingRight="@dimen/spacing16"
-        android:paddingStart="@dimen/spacing16"
-        android:paddingTop="@dimen/spacing0" />
+        android:orientation="vertical"/>
 </LinearLayout>

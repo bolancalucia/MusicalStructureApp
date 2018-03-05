@@ -26,7 +26,7 @@ public class HipHopActivity extends AppCompatActivity {
         songs.add(new Song("Him & I", "G-Eazy &  Halsey", "4:29", (ImageView) findViewById(R.id.play_song)));
         songs.add(new Song("Love.", "Kendrick Lamar featuring Zacari", "3:33", (ImageView) findViewById(R.id.play_song)));
 
-        SongAdapter songAdapter = new SongAdapter(this, songs);
+        SongAdapter songAdapter = new SongAdapter(this, songs, R.color.colorHipHop);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(songAdapter);
 

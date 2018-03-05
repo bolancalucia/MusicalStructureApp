@@ -26,7 +26,7 @@ public class PopActivity extends AppCompatActivity {
         songs.add(new Song("Havana", "Camila Cabello featuring Young Thug", "3:37", (ImageView) findViewById(R.id.play_song)));
         songs.add(new Song("Bad At Love", "Halsey", "3:01", (ImageView) findViewById(R.id.play_song)));
 
-        SongAdapter songAdapter = new SongAdapter(this, songs);
+        SongAdapter songAdapter = new SongAdapter(this, songs, R.color.colorPop);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(songAdapter);
     }

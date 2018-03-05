@@ -3,6 +3,7 @@ package com.example.android.musicalstructureapp;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +14,11 @@ import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
-    public SongAdapter(Activity context, ArrayList<Song> songs) {
+    private int mColorResourceId;
+
+    public SongAdapter(Activity context, ArrayList<Song> songs, int colorResourceId ) {
         super(context, 0, songs);
+        mColorResourceId = colorResourceId;
     }
 
     @NonNull
@@ -38,6 +42,11 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         TextView durationTextView = listItemView.findViewById(R.id.duration_time);
         durationTextView.setText(currentSong.getDuration());
+
+        View textContainer = listItemView.findViewById(R.id.color_list);
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        textContainer.setBackgroundColor(color);
+
 
         return listItemView;
     }
